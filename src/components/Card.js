@@ -61,9 +61,17 @@ class Card extends Component {
          console.log("index" + this.state.count)
     }
 
+    
 
   render (){
 
+    if(this.state.count === 25){
+      this.displayDefault();
+    }
+
+    if(this.state.count === 0){
+      this.setState({count: 25})
+    }
   return (
     <div className="source">
     <div className="homeNavBar">
